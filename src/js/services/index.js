@@ -25,5 +25,7 @@ servicesModule.service('Comments', CommentsService);
 import TagsService from './tags.service';
 servicesModule.service('Tags', TagsService);
 
+import LocalStorageService from './localStorage.service';
+servicesModule.service('LocalStorage', LocalStorageService);
 
 export default servicesModule;

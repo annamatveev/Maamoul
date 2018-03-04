@@ -1,17 +1,21 @@
 export default class Users {
-    constructor(JWT, AppConstants, $http, $q) {
+    constructor(AppConstants, $http) {
         'ngInject';
 
         this._AppConstants = AppConstants;
         this._$http = $http;
-
-
     }
 
     getAllNames() {
         return this._$http({
             url: this._AppConstants.api + '/users',
             method: 'GET',
-        }).then((res) => res.data.map((item) => ({ value: angular.lowercase(item.name), display: item.name })));
+        }).then((res) => res.data.map((item) => ({ id: item.id,
+                                                    username: item.username,
+                                                    value: angular.lowercase(item.name),
+                                                    display: item.name
+                                                })
+                                    )
+        );
     }
 }

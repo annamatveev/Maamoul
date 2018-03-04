@@ -1,14 +1,22 @@
 class AutocompleteCtrl {
 
-    constructor($q, Users) {
+    constructor($q, Users, LocalStorage, $scope) {
         'ngInject';
         var self = this;
         this._$q = $q;
+        this._LocalStorage = LocalStorage;
 
-        Users.getAllNames().then(function(users) {
+        Users.getAllNames().then(function (users) {
             self.users = users;
         })
+        console.log(this);
+        console.log($scope);
     }
+
+    onSelectedItemChange(item) {
+        this.onSelectItem({item: item});
+    }
+
     createFilterFor(query) {
         var lowercaseQuery = angular.lowercase(query);
 
