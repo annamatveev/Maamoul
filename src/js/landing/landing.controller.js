@@ -10,7 +10,12 @@ class LandingCtrl {
     }
 
     selectedItemChange(item) {
-        this._LocalStorage.set('user', item);
+        if (item) {
+            this._LocalStorage.set('user', item);
+        }
+        else {
+            this._LocalStorage.remove('user');
+        }
     }
 }
 
