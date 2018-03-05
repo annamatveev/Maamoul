@@ -6,7 +6,6 @@ function LandingConfig($stateProvider) {
             url: '/',
             controller: 'LandingCtrl',
             controllerAs: '$ctrl',
-            templateUrl: 'landing/landing.html',
             title: 'Home'
         });
 

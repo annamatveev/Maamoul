@@ -10,5 +10,8 @@ export default class LocalStorage {
     remove(key) {
         localStorage.removeItem(key);
     }
+    hasKey(key) {
+        return localStorage.getItem(key) !== null
+    }
 
 }

@@ -1,0 +1,9 @@
+.photos {
+    margin: 0 auto;
+    width: 500px;
+}
+
+.photos md-card {
+    max-width: 300px;
+    margin: 0 auto;
+}

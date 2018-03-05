@@ -10,6 +10,9 @@ servicesModule.service('User', UserService);
 import UsersService from './users.service';
 servicesModule.service('Users', UsersService);
 
+import PhotosService from './photos.service';
+servicesModule.service('Photos', PhotosService);
+
 import JwtService from './jwt.service'
 servicesModule.service('JWT', JwtService);
 
