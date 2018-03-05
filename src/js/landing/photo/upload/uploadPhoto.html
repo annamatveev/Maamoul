@@ -1,23 +1,21 @@
 <div class="photos">
     <div ng-repeat="photo in $ctrl.$resolve.photos">
-
         <md-card>
             <md-card-header>
                 <md-card-title>{{ photo.user_id }}</md-card-title>
             </md-card-header>
             <img md-card-image ng-src="{{ photo.url }}" alt="Photo of you!">
         </md-card>
-
-        <form>
-            <div layout="column" ng-cloak class="md-inline-form">
-                <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
-                    <md-input-container>
-                        <label>Upload another photo (from URL)</label>
-                        <input ng-model="$ctrl.uploadPhoto.url" required>
-                    </md-input-container>
-                </md-content>
-            </div>
-        </form>
-        <md-button ng-disabled="!$ctrl.uploadPhoto.url.startsWith('http')" ng-click="$ctrl.uploadPhoto()" class="md-raised md-primary">Upload</md-button>
     </div>
+    <form>
+        <div layout="column" ng-cloak class="md-inline-form">
+            <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+                <md-input-container>
+                    <label>Upload another photo (from URL)</label>
+                    <input ng-model="$ctrl.uploadPhoto.url" required>
+                </md-input-container>
+            </md-content>
+        </div>
+    </form>
+    <md-button ng-disabled="!$ctrl.uploadPhoto.url.startsWith('http')" ng-click="$ctrl.uploadPhoto()" class="md-raised md-primary">Upload</md-button>
 </div>
