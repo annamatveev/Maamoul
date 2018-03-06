@@ -11,6 +11,6 @@ import GameCtrl from './game.controller';
 gameModule.controller('GameCtrl', GameCtrl);
 
 import Guess from './guess/guess.component';
-gameModule.controller('Guess', Guess);
+gameModule.component('guess', Guess);
 
 export default gameModule;
