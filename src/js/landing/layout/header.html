@@ -3,4 +3,7 @@
     ui-sref="app.home">
     <md-headline>{{$ctrl.appName}}</md-headline>
   </a>
+  <div ng-show="$ctrl.currentUser.display" class="welcome-user">
+    Welcome, {{ $ctrl.currentUser.display }}
+  </div>
 </div>

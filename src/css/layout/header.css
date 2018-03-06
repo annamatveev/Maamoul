@@ -2,8 +2,15 @@
     background-color: #7e5896;
     height: 30px;
     color: white;
-    font-weight: bold;
-    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
     padding-left: 10px;
     padding-top: 10px;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.header md-headline {
+    text-transform: uppercase;
+    font-weight: bold;
 }
