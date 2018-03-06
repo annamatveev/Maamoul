@@ -4,9 +4,9 @@ function PhotoConfig($stateProvider) {
     $stateProvider
         .state('app.photo', {
             url: '/photo',
-            controller: 'UploadPhotoCtrl',
+            controller: 'PhotoCtrl',
             controllerAs: '$ctrl',
-            templateUrl: 'landing/photo/upload/uploadPhoto.html',
+            templateUrl: 'landing/photo/photo.html',
             title: 'Show yourself',
             resolve: {
                 photos: function(Photos, LocalStorage) {

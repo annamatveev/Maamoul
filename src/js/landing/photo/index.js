@@ -3,11 +3,18 @@ import angular from 'angular';
 let photoModule = angular.module('app.photo', []);
 
 // Route Config
-import PhotoConfig from './upload/uploadPhoto.config';
+import PhotoConfig from './photo.config';
 photoModule.config(PhotoConfig);
 
 // Controllers
-import UploadPhotoCtrl from './upload/uploadPhoto.controller';
-photoModule.controller('UploadPhotoCtrl', UploadPhotoCtrl);
+import PhotoCtrl from './photo.controller';
+photoModule.controller('PhotoCtrl', PhotoCtrl);
+
+// Components
+import Gallery from './gallery/gallery.component';
+photoModule.component('gallery', Gallery);
+
+import UploadPhoto from './upload/upload.component';
+photoModule.component('uploadPhoto', UploadPhoto);
 
 export default photoModule;

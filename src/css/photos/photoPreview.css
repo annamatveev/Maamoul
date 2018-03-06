@@ -1,9 +1,25 @@
 .photos {
     margin: 0 auto;
-    width: 500px;
 }
 
 .photos md-card {
-    max-width: 300px;
+    max-width: 200px;
     margin: 0 auto;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin: 0 auto 20px;
+}
+
+.photo-gallery .photo {
+    transition: transform .5s;
+    margin: 0 auto;
+}
+
+.photo-gallery .photo:hover {
+    transform: scale3d(1.05, 1.05, 1);
+    transition-duration: 0.3s;
 }

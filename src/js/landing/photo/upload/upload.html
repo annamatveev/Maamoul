@@ -1,0 +1,11 @@
+<form>
+    <div layout="column" ng-cloak class="md-inline-form">
+        <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+            <md-input-container>
+                <label>Upload another photo (from URL)</label>
+                <input ng-model="$ctrl.uploadPhoto.url" required>
+            </md-input-container>
+        </md-content>
+    </div>
+    <md-button ng-disabled="!$ctrl.uploadPhoto.url.startsWith('http')" ng-click="$ctrl.uploadPhoto()" class="md-raised md-primary upload-photo">Upload</md-button>
+</form>
