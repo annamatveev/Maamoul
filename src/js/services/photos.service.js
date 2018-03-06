@@ -20,11 +20,11 @@ export default class Photos {
         );
     }
 
-    uploadPhoto(user, photo) {
+    uploadPhoto(user, url) {
         return this._$http({
             url: `${this._AppConstants.api}/users/${user.id}/photos`,
             method: 'POST',
-            data: { url: photo }
+            data: { url }
         }).then(function(res) {
                     console.log(res)
                 }

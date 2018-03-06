@@ -1,18 +1,19 @@
 class GuessCtrl {
 
-    constructor($q, $scope, $location, $resolve, Users, LocalStorage) {
+    constructor($scope, $location, Guess, LocalStorage) {
         'ngInject';
 
-        this._$q = $q;
         this._LocalStorage = LocalStorage;
         this._$scope = $scope;
         this._$location = $location;
-
+        this._Guess = Guess;
+        this._LocalStorage = LocalStorage;
     }
 
     guessName() {
-        console.log(this.guess.photo_id);
-        console.log(this.selectedUser);
+        this._Guess.guessName(this.guess.photo_id, this.selectedUser).then(function(correct) {
+            console.log(correct);
+        })
     }
 }
 

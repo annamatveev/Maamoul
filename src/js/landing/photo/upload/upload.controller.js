@@ -9,7 +9,6 @@ class UploadPhotoCtrl {
     uploadPhoto() {
         const url = this.uploadPhoto.url;
         this._Photos.uploadPhoto(this.loggedInUser, url);
-        console.log(url);
     }
 
 }
