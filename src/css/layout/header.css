@@ -1,0 +1,9 @@
+.header {
+    background-color: #7e5896;
+    height: 30px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-top: 10px;
+}
