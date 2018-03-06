@@ -12,5 +12,13 @@
                 </md-radio-button>
             </md-radio-group>
         </div>
+        <div class="feedback">
+            <div ng-show="$ctrl.answered && $ctrl.correctAnswer" class="correct">
+                Correct
+            </div>
+            <div ng-show="$ctrl.answered && !$ctrl.correctAnswer" class="wrong">
+                Wrong
+            </div>
+        </div>
     </div>
 </div>

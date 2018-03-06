@@ -17,3 +17,18 @@
     transform: scale3d(1.05, 1.05, 1);
     transition-duration: 0.3s;
 }
+
+.guess .feedback {
+    width: 100px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.guess .feedback .correct {
+    color: #25783b;
+ }
+
+.guess .feedback .wrong {
+    color: #832133;
+}
