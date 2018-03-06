@@ -1,11 +1,11 @@
 class GuessCtrl {
 
-    constructor($scope, $location, Guess, LocalStorage) {
+    constructor($timeout, $state, AppConstants, Guess, LocalStorage) {
         'ngInject';
 
-        this._LocalStorage = LocalStorage;
-        this._$scope = $scope;
-        this._$location = $location;
+        this._$timeout = $timeout;
+        this._$state = $state;
+        this._AppConstants = AppConstants;
         this._Guess = Guess;
         this._LocalStorage = LocalStorage;
         this.answered = false;
@@ -17,6 +17,7 @@ class GuessCtrl {
         this._Guess.guessName(this.guess.photo_id, this.selectedUser).then(function(correct) {
             self.answered = true;
             self.correctAnswer = Boolean(correct);
+            self._$timeout(self._$state.reload, self._AppConstants.guessInterval);
 
         })
     }

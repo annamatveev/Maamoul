@@ -3,6 +3,7 @@ const AppConstants = {
   jwtKey: 'jwtToken',
   appName: 'Sample',
   localStorageUserKey: 'user',
+  guessInterval: 1500
 };
 
 export default AppConstants;
