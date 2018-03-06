@@ -9,8 +9,9 @@ function IdentificationConfig($stateProvider) {
             templateUrl: 'landing/game/game.html',
             title: 'Start playin',
             resolve: {
-                guess: function(Users) {
-                    return Users.getAllNames();
+                guess: function(Guess, LocalStorage) {
+                    const user = LocalStorage.get('user');
+                    return Guess.nextGuess(user.id);
                 }
             }
         });

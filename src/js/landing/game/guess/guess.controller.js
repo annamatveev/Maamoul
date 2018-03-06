@@ -9,6 +9,11 @@ class GuessCtrl {
         this._$location = $location;
 
     }
+
+    guessName() {
+        console.log(this.guess.photo_id);
+        console.log(this.selectedUser);
+    }
 }
 
 export default GuessCtrl;

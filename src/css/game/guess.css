@@ -1,0 +1,19 @@
+.guess .photo md-card{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.guess-choices {
+    width: 200px;
+    margin: 30px auto 0;
+}
+
+.guess .photo md-card {
+    transition: transform .5s;
+    margin: 0 auto;
+}
+
+.guess .photo md-card:hover {
+    transform: scale3d(1.05, 1.05, 1);
+    transition-duration: 0.3s;
+}
