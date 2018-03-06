@@ -16,6 +16,7 @@ import './landing/app/index';
 import './landing/layout/index';
 import './landing/identification';
 import './landing/photo';
+import './landing/game';
 import './landing/app';
 import './components';
 import './profile';
@@ -33,6 +34,7 @@ const requires = [
   'ngMaterial',
   'app.identification',
   'app.photo',
+  'app.game',
   'app.layout',
   'app.landing',
   'app.components',

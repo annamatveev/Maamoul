@@ -1,4 +1,11 @@
 <div class="photos">
+    <div class="welcome-message">
+        {{ $ctrl.message }}
+    </div>
     <gallery photos="$ctrl.$resolve.photos"></gallery>
     <upload-photo></upload-photo>
+
+    <div class="start-playing">
+        <md-button ng-click="$ctrl.skipUpload()" class="md-raised md-primary start-playing-button">Start Playin'</md-button>
+    </div>
 </div>

@@ -9,7 +9,6 @@ class LandingCtrl {
         this.identified = this._LocalStorage.hasKey('user');
         this.hasPhoto = false;
 
-        console.log("aaa");
         if (this.identified) {
             $location.path('/photo');
         }

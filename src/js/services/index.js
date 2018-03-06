@@ -13,6 +13,9 @@ servicesModule.service('Users', UsersService);
 import PhotosService from './photos.service';
 servicesModule.service('Photos', PhotosService);
 
+import GuessService from './guess.service';
+servicesModule.service('Guess', GuessService);
+
 import JwtService from './jwt.service'
 servicesModule.service('JWT', JwtService);
 

@@ -1,18 +1,4 @@
-class UploadPhotoCtrl {
-    constructor(AppConstants, Photos, LocalStorage) {
-        'ngInject';
-
-        this._Photos = Photos;
-        this.loggedInUser = LocalStorage.get(AppConstants.localStorageUserKey);
-    }
-
-    uploadPhoto() {
-        const url = this.uploadPhoto.url;
-        this._Photos.uploadPhoto(this.loggedInUser, url);
-        console.log(url);
-    }
-
-}
+import UploadPhotoCtrl from './upload.controller'
 
 let UploadPhoto = {
     controller: UploadPhotoCtrl,
