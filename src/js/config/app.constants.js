@@ -1,7 +1,7 @@
 const AppConstants = {
   api: 'http://localhost:3000',
   jwtKey: 'jwtToken',
-  appName: 'candirwho',
+  appName: 'sample',
   localStorageUserKey: 'user',
   guessInterval: 1500
 };
