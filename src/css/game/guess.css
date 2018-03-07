@@ -18,12 +18,12 @@
     margin: 30px auto 0;
 }
 
-.guess .photo md-card {
+.guess md-card {
     transition: transform .5s;
+    margin: 0 auto;
 }
 
-
-.guess .photo md-card:hover {
+.guess md-card:hover {
     transform: scale3d(1.05, 1.05, 1);
     transition-duration: 0.3s;
 }
