@@ -34,6 +34,7 @@ const requires = [
   'ui.router',
   'templates',
   'ngMaterial',
+  'ngAnimate',
   'app.identification',
   'app.photo',
   'app.board',

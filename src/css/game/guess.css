@@ -1,3 +1,7 @@
+.welcome-message {
+    margin-top: 100px;
+}
+
 .guess {
     display: flex;
     justify-content: space-between;
