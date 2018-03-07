@@ -1,0 +1,8 @@
+<div class="top-table">
+    <table>
+        <div class="top-gamer" ng-repeat="gamer in $ctrl.gamers | orderBy: '-score'">
+            <div class="gamer-name">{{ gamer.name }}</div>
+            <div class="gamer-score">{{ gamer.score }}</div>
+        </div>
+    </table>
+</div>

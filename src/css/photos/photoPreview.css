@@ -7,6 +7,14 @@
     margin: 0 auto;
 }
 
+.photo-placeholder {
+    width: 200px;
+    height: 200px;
+    background-image: url(https://loading.io/spinners/square/lg.square-grid-loader.gif);
+    background-size: contain;
+    margin: 0 auto;
+}
+
 .photo-gallery {
     display: flex;
     flex-direction: row;

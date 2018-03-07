@@ -1,4 +1,14 @@
-.guess .photo md-card{
+.guess {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 200px;
+    height: 400px;
+    margin: 0 auto;
+    align-self: center;
+}
+
+.guess .photo md-card {
     max-width: 200px;
     margin: 0 auto;
 }
@@ -12,10 +22,6 @@
     transition: transform .5s;
 }
 
-.guess .photo md-card img {
-    opacity: 1;
-    transition: opacity 0.6s ease;
-}
 
 .guess .photo md-card:hover {
     transform: scale3d(1.05, 1.05, 1);
@@ -41,6 +47,8 @@
     width: 200px;
     height: 200px;
     background-image: url(https://loading.io/spinners/square/lg.square-grid-loader.gif);
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 180px 180px;
     margin: 0 auto;
 }

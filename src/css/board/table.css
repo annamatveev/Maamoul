@@ -1,0 +1,22 @@
+.top-table {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.top-table .top-gamer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.top-table .top-gamer:nth-child(1) {
+    font-size: 35px;
+}
+
+.top-table .top-gamer:nth-child(2) {
+    font-size: 30px;
+}
+
+.top-table .top-gamer:nth-child(3) {
+    font-size: 25px;
+}

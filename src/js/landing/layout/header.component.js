@@ -4,7 +4,6 @@ class AppHeaderCtrl {
 
     this.appName = AppConstants.appName;
     this.currentUser = LocalStorage.get(AppConstants.localStorageUserKey);
-    console.log(LocalStorage.get(AppConstants.localStorageUserKey))
   }
 }
 

@@ -13,11 +13,11 @@ export default class Guess {
         }).then((res) => res.data);
     }
 
-    guessName(photo_id, user_id) {
+    guessName(photo_id, guessed_user_id, user_id) {
         return this._$http({
             url: `${this._AppConstants.api}/users/${user_id}/guess`,
             method: 'POST',
-            data: { photo_id, user_id }
+            data: { photo_id, guessed_user_id }
         }).then((res) => res.data.body);
     }
 }

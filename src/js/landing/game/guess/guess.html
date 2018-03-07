@@ -1,26 +1,24 @@
 <div class="guess">
-    <div class="photo">
-        <div class="photo-placeholder">
-            <md-card>
-                <img md-card-image ng-src="{{ $ctrl.guess.photo_url }}" alt="Photo of you!">
-            </md-card>
+    <div class="photo-placeholder">
+        <md-card>
+            <img md-card-image ng-src="{{ $ctrl.guess.photo_url }}" alt="Photo of you!">
+        </md-card>
+    </div>
+    <div class="guess-choices">
+        <md-radio-group ng-model="$ctrl.selectedUser" ng-change="$ctrl.guessName()">
+            <md-radio-button ng-repeat="user in $ctrl.guess.users"
+                             ng-value="user.id"
+                             ng-class="{'md-align-top-left': $index==1}" >
+                {{ user.name }}
+            </md-radio-button>
+        </md-radio-group>
+    </div>
+    <div class="feedback">
+        <div ng-style="{'visibility': $ctrl.answered && $ctrl.correctAnswer ?'visible':'hidden'}" class="correct">
+            Correct
         </div>
-        <div class="guess-choices">
-            <md-radio-group ng-model="$ctrl.selectedUser" ng-change="$ctrl.guessName()">
-                <md-radio-button ng-repeat="user in $ctrl.guess.users"
-                                 ng-value="user.id"
-                                 ng-class="{'md-align-top-left': $index==1}" >
-                    {{ user.name }}
-                </md-radio-button>
-            </md-radio-group>
-        </div>
-        <div class="feedback">
-            <div ng-show="$ctrl.answered && $ctrl.correctAnswer" class="correct">
-                Correct
-            </div>
-            <div ng-show="$ctrl.answered && !$ctrl.correctAnswer" class="wrong">
-                Wrong
-            </div>
+        <div ng-style="{'visibility': $ctrl.answered && !$ctrl.correctAnswer ?'visible':'hidden'}" class="wrong">
+            Wrong
         </div>
     </div>
 </div>
