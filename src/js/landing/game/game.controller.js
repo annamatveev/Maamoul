@@ -20,7 +20,15 @@ class GameCtrl {
             'how you doin\'?',
             'no soup for you!',
             'suit up!',
-            'wubba lubba dub dub'
+            'wubba lubba dub dub',
+            'huston, we have a problem',
+            'say hello to my little friend',
+            'did i do that?',
+            'is that your final answer?',
+            'live long and prosper',
+            'yabba dabba doo!',
+            'frankly, my dear, i don\'t give a damn',
+            'i have a bad feeling about this',
         ];
         return messages[Math.floor(Math.random() * messages.length)];
 

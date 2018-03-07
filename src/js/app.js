@@ -15,8 +15,9 @@ import './config/app.templates';
 import './landing/app/index';
 import './landing/layout/index';
 import './landing/identification';
-import './landing/photo';
+import './landing/notfound';
 import './landing/board';
+import './landing/photo';
 import './landing/game';
 import './landing/app';
 import './components';
@@ -36,6 +37,7 @@ const requires = [
   'app.identification',
   'app.photo',
   'app.board',
+  'app.notfound',
   'app.game',
   'app.layout',
   'app.landing',
