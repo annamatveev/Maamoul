@@ -7,6 +7,33 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ede5e591;
+    padding-bottom: 5px;
+}
+
+.top-table .top-gamer {
+    transition: 0.15s all ease-in;
+    color: black;
+}
+
+.top-table .top-gamer:hover {
+    color: orange;
+    transform: scale(1.15);
+}
+
+/*.top-table .top-gamer .gamer-score {*/
+    /*transition: 0.15s all ease-in;*/
+    /*color: black;*/
+/*}*/
+
+/*.top-table .top-gamer:hover .gamer-score {*/
+    /*color: orange;*/
+    /*transform: scale(1.15);*/
+/*}*/
+
+.top-table .top-gamer img {
+    height: 35px;
 }
 
 .top-table .top-gamer:nth-child(1) {

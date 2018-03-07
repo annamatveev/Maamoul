@@ -42,13 +42,3 @@
 .guess .feedback .wrong {
     color: #832133;
 }
-
-.guess .photo-placeholder {
-    width: 200px;
-    height: 200px;
-    background-image: url(https://loading.io/spinners/square/lg.square-grid-loader.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 180px 180px;
-    margin: 0 auto;
-}

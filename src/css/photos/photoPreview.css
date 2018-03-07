@@ -3,15 +3,14 @@
 }
 
 .photos md-card {
-    max-width: 200px;
     margin: 0 auto;
 }
 
 .photo-placeholder {
     width: 200px;
     height: 200px;
-    background-image: url(https://loading.io/spinners/square/lg.square-grid-loader.gif);
-    background-size: contain;
+    background: url(https://loading.io/spinners/fidget-spinner/index.fidget-spinner.gif) no-repeat center;
+    flex-shrink: 0;
     margin: 0 auto;
 }
 

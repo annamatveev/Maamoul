@@ -1,7 +1,11 @@
 <div class="top-table">
     <table>
         <div class="top-gamer" ng-repeat="gamer in $ctrl.gamers | orderBy: '-score'">
-            <div class="gamer-name">{{ gamer.name }}</div>
+
+            <div class="gamer-name">
+                <img ng-show="$index == 0" src="https://loading.io/spinners/lava-lamp/index.lava-lamp-preloader.gif" />
+                <span class="gamer-name-text">{{ gamer.name }}</span>
+            </div>
             <div class="gamer-score">{{ gamer.score }}</div>
         </div>
     </table>
