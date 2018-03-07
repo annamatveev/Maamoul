@@ -1,9 +1,12 @@
 <div class="header">
   <a md-headline
-    ui-sref="app.home">
+     ng-click="$ctrl.navigateHome()">
     <md-headline>{{$ctrl.appName}}</md-headline>
   </a>
-  <div ng-show="$ctrl.currentUser.display" class="welcome-user">
-    Welcome, {{ $ctrl.currentUser.display }}
+  <div class="left-menu">
+    <div ng-show="$ctrl.currentUser.display" class="welcome-user">
+      Welcome, {{ $ctrl.currentUser.display }}
+    </div>
+    <side-nav></side-nav>
   </div>
 </div>

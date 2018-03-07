@@ -1,0 +1,33 @@
+<a ng-click="$ctrl.toggleRight()"
+   ng-hide="$ctrl.isOpenRight()"
+   class="md-primary">
+    <div>
+        <md-icon class="menu-icon md-light" ng-bind="'menu'"></md-icon>
+    </div>
+</a>
+
+<div layout="column" style="height:500px;" ng-cloak>
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-right md-whiteframe-4dp" md-component-id="right">
+            <md-toolbar class="md-theme-light">
+                <h1 class="md-toolbar-tools">What are you up to?</h1>
+            </md-toolbar>
+            <md-content class="sidebar-list" layout-padding>
+                <div>
+                    <md-icon ng-bind="'face'"></md-icon>
+                    <span>Discover</span>
+                </div>
+                <div>
+                    <md-icon ng-bind="'whatshot'"></md-icon>
+                    <span>Hall of Fame</span>
+                </div>
+                <div>
+                    <md-icon ng-bind="'exit_to_app'"></md-icon>
+                    <span>Logout</span>
+                </div>
+            </md-content>
+            <md-divider ></md-divider>
+        </md-sidenav>
+    </section>
+</div>
+

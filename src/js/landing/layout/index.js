@@ -11,5 +11,7 @@ layoutModule.component('appHeader', AppHeader);
 import AppFooter from './footer.component';
 layoutModule.component('appFooter', AppFooter);
 
+import SideNav from './sidenav/sidenav.component';
+layoutModule.component('sideNav', SideNav);
 
 export default layoutModule;
