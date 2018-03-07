@@ -3,3 +3,9 @@
     width: 200px;
     margin: 20px auto 0;
 }
+
+.start-playing button {
+    width: 200px;
+    height: 60px;
+    font-size: 18px;
+}
