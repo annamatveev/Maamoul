@@ -8,6 +8,7 @@
         <md-radio-group ng-model="$ctrl.selectedUser" ng-change="$ctrl.guessName()">
             <md-radio-button ng-repeat="user in $ctrl.guess.users"
                              ng-value="user.id"
+                             ng-disabled="$ctrl.answered"
                              ng-class="{'md-align-top-left': $index==1}" >
                 {{ user.name }}
             </md-radio-button>

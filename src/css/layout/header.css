@@ -43,3 +43,7 @@
 .sidebar-list md-icon {
     margin-right: 20px;
 }
+
+.sidebar-list div {
+    cursor: pointer;
+}

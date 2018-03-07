@@ -13,15 +13,15 @@
                 <h1 class="md-toolbar-tools">What are you up to?</h1>
             </md-toolbar>
             <md-content class="sidebar-list" layout-padding>
-                <div>
+                <div class="discover-button" ng-click="$ctrl.navigateToDiscover()">
                     <md-icon ng-bind="'face'"></md-icon>
                     <span>Discover</span>
                 </div>
-                <div>
+                <div class="board-button" ng-click="$ctrl.navigateToBoard()">
                     <md-icon ng-bind="'whatshot'"></md-icon>
                     <span>Hall of Fame</span>
                 </div>
-                <div>
+                <div class="logout-button" ng-click="$ctrl.logout()">
                     <md-icon ng-bind="'exit_to_app'"></md-icon>
                     <span>Logout</span>
                 </div>

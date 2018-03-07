@@ -1,9 +1,12 @@
 class SideNavCtrl {
-    constructor($timeout, $mdSidenav) {
+    constructor($timeout, $location, $mdSidenav, AppConstants, LocalStorage) {
         'ngInject';
 
         this._$timeout = $timeout;
+        this._$location = $location;
         this._$mdSidenav = $mdSidenav;
+        this._LocalStorage = LocalStorage;
+        this._AppConstants = AppConstants;
         this.toggleLeft = this.buildDelayedToggler('left');
         this.toggleRight = this.buildToggler('right');
         this.isOpenRight = function(){
@@ -44,6 +47,30 @@ class SideNavCtrl {
                     console.log("toggle " + navID + " is done");
                 });
         };
+    }
+
+    close() {
+        this._$mdSidenav('right').close()
+            .then(function () {
+                console.log("close LEFT is done");
+            });
+
+    };
+
+    navigateToBoard() {
+        this._$location.path('/board');
+        this.close();
+    }
+
+    navigateToDiscover() {
+        this._$location.path('/discover');
+        this.close();
+    }
+
+    logout() {
+        this._LocalStorage.remove(this._AppConstants.localStorageUserKey);
+        this._$location.path('/');
+        this.close();
     }
 }
 

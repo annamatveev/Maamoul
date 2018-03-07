@@ -7,13 +7,9 @@ class AppHeaderCtrl {
     this.currentUser = LocalStorage.get(AppConstants.localStorageUserKey);
   }
 
-  navigateToBoard() {
-    this._$location.path('/board');
-  }
-
   navigateHome() {
         this._$location.path('/');
-    }
+  }
 }
 
 let AppHeader = {
