@@ -6,9 +6,10 @@ class GalleryCtrl {
     }
 
     deletePhoto(photoIndex, photoId) {
-        console.log(photoIndex);
+        if (confirm("Are you sure you want to delete this photo?")) {
+            this.photos.splice(photoIndex, 1);
+        }
 
-        this.photos.splice(photoIndex, 1);
     }
 }
 

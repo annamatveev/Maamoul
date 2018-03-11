@@ -1,7 +1,9 @@
 <div class="photo-gallery">
     <div class="photo" ng-repeat="photo in $ctrl.photos">
         <div class="photo-placeholder">
-            <div class="clear-icon" ng-click="$ctrl.deletePhoto($index, photo.id)" ng-show="$ctrl.photos.length > 1">
+            <div class="clear-icon"
+                 ng-click="$ctrl.deletePhoto($index, photo.id)"
+                 ng-show="$ctrl.photos.length > 1">
                 <md-tooltip md-direction="top">Delete Photo</md-tooltip>
                 <md-icon ng-bind="'clear'"></md-icon>
             </div>

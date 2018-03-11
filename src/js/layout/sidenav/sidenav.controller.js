@@ -32,28 +32,19 @@ class SideNavCtrl {
     buildDelayedToggler(navID) {
         return this.debounce(function() {
             this._$mdSidenav(navID)
-                .toggle()
-                .then(function () {
-                    console.log("toggle " + navID + " is done");
-                });
+                .toggle();
         }, 200);
     }
 
     buildToggler(navID) {
         return function() {
             this._$mdSidenav(navID)
-                .toggle()
-                .then(function () {
-                    console.log("toggle " + navID + " is done");
-                });
+                .toggle();
         };
     }
 
     close() {
-        this._$mdSidenav('right').close()
-            .then(function () {
-                console.log("close LEFT is done");
-            });
+        this._$mdSidenav('right').close();
 
     };
 
