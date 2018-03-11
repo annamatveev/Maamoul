@@ -19,18 +19,8 @@
 
 .top-table .top-gamer:hover {
     color: orange;
-    transform: scale(1.15);
+    transform: scale(1.05);
 }
-
-/*.top-table .top-gamer .gamer-score {*/
-    /*transition: 0.15s all ease-in;*/
-    /*color: black;*/
-/*}*/
-
-/*.top-table .top-gamer:hover .gamer-score {*/
-    /*color: orange;*/
-    /*transform: scale(1.15);*/
-/*}*/
 
 .top-table .top-gamer img {
     height: 35px;

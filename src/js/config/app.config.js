@@ -4,7 +4,7 @@ function AppConfig($stateProvider, $locationProvider, $urlRouterProvider) {
   $stateProvider
   .state('app', {
     abstract: true,
-    templateUrl: 'landing/layout/main-view.html'
+    templateUrl: 'layout/main-view.html'
   });
 
   $urlRouterProvider.otherwise('/notfound');
