@@ -1,9 +1,14 @@
 class GalleryCtrl {
-    constructor(Photos, LocalStorage) {
+    constructor(Photos) {
         'ngInject';
 
         this._Photos = Photos;
-        this.loggedInUser = LocalStorage.get(AppConstants.localStorageUserKey);
+    }
+
+    deletePhoto(photoIndex, photoId) {
+        console.log(photoIndex);
+
+        this.photos.splice(photoIndex, 1);
     }
 }
 

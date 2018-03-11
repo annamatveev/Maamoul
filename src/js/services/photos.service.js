@@ -30,4 +30,15 @@ export default class Photos {
                 }
         );
     }
+
+    deletePhoto(photo_id) {
+        return this._$http({
+            url: `${this._AppConstants.api}/photos/${photo_id}`,
+            method: 'DELETE',
+            data: { photo_id }
+        }).then(function(res) {
+                console.log(res)
+            }
+        );
+    }
 }

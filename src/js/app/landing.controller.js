@@ -1,12 +1,10 @@
 class LandingCtrl {
-    constructor(AppConstants, $scope, $location, LocalStorage) {
+    constructor(AppConstants, $location, LocalStorage) {
         'ngInject';
 
-        this.appName = AppConstants.appName;
-        this._$scope = $scope;
         this._LocalStorage = LocalStorage;
 
-        this.identified = this._LocalStorage.hasKey('user');
+        this.identified = this._LocalStorage.hasKey(AppConstants.localStorageUserKey);
         this.hasPhoto = false;
 
         if (this.identified) {

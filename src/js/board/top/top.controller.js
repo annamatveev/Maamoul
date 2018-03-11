@@ -1,6 +1,6 @@
 class TopGamersCtrl {
 
-    constructor($timeout, $state, AppConstants, Board) {
+    constructor($timeout, $state, AppConstants) {
         'ngInject';
 
         this._$timeout = $timeout;

@@ -41,8 +41,14 @@
 
 .guess .feedback .correct {
     color: #25783b;
+    transition: all linear 0.5s;
  }
 
 .guess .feedback .wrong {
     color: #832133;
+    transition: all linear 0.5s;
+}
+
+.guess .feedback .correct.ng-hide {
+    opacity: 0;
 }

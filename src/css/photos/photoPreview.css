@@ -30,3 +30,23 @@
     transform: scale3d(1.05, 1.05, 1);
     transition-duration: 0.3s;
 }
+
+.clear-icon {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -13px;
+    margin-left: -13px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    border: 1px solid grey;
+}
+
+.clear-icon md-icon {
+    color: #232323;
+}
+
+.photo-placeholder:hover .clear-icon {
+    display: inline-block;
+}

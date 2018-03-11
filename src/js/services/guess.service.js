@@ -20,4 +20,11 @@ export default class Guess {
             data: { photo_id, guessed_user_id }
         }).then((res) => res.data.body);
     }
+
+    topGamers() {
+        return this._$http({
+            url: `${this._AppConstants.api}/users/top_gamers`,
+            method: 'GET'
+        }).then((res) => res.data);
+    }
 }

@@ -1,11 +1,10 @@
 class IdentificationCtrl {
 
-    constructor($q, $scope, $location, $resolve, Users, LocalStorage) {
+    constructor($q, $scope, $location, Users, LocalStorage) {
         'ngInject';
 
         this._$q = $q;
         this._LocalStorage = LocalStorage;
-        this._$scope = $scope;
         this._$location = $location;
 
     }
@@ -21,7 +20,7 @@ class IdentificationCtrl {
     }
 
     createFilterFor(query) {
-        var lowercaseQuery = angular.lowercase(query);
+        const lowercaseQuery = angular.lowercase(query);
 
         return function filterFn(state) {
             return (state.value.indexOf(lowercaseQuery) === 0);
@@ -30,7 +29,7 @@ class IdentificationCtrl {
     }
 
     querySearch (query) {
-        var results = query ? this.$resolve.users.filter(this.createFilterFor(query) ) : this.$resolve.users;
+        const results = query ? this.$resolve.users.filter(this.createFilterFor(query) ) : this.$resolve.users;
         return results;
     }
 }
