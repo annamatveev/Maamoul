@@ -1,0 +1,11 @@
+.game-end {
+    width: 200px;
+    margin: 150px auto 0;
+    text-align: center;
+}
+
+.game-end-message {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

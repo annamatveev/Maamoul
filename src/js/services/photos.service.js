@@ -8,7 +8,7 @@ export default class Photos {
 
     getUserPhotos(user_id) {
         return this._$http({
-            url: `${this._AppConstants.api}/users/${user_id}/photos`,
+            url: `${this._AppConstants.api}/photos/${user_id}`,
             method: 'GET',
         }).then((res) => res.data.map((item) => ({
                 id: item.id,
@@ -22,13 +22,10 @@ export default class Photos {
 
     uploadPhoto(user, url) {
         return this._$http({
-            url: `${this._AppConstants.api}/users/${user.id}/photos`,
+            url: `${this._AppConstants.api}/photos`,
             method: 'POST',
-            data: { url }
-        }).then(function(res) {
-                    console.log(res)
-                }
-        );
+            data: { user_id: user.id, url }
+        });
     }
 
     deletePhoto(photo_id) {
@@ -36,9 +33,6 @@ export default class Photos {
             url: `${this._AppConstants.api}/photos/${photo_id}`,
             method: 'DELETE',
             data: { photo_id }
-        }).then(function(res) {
-                console.log(res)
-            }
-        );
+        });
     }
 }

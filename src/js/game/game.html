@@ -1,5 +1,13 @@
-<div class="welcome-message">
-    {{ $ctrl.message }}
+<div ng-show="$ctrl.$resolve.guess" class="game">
+    <div class="welcome-message">
+        {{ $ctrl.message }}
+    </div>
+    <guess guess="$ctrl.$resolve.guess"></guess>
 </div>
-<guess guess="$ctrl.$resolve.guess"></guess>
+<div class="game-end" ng-show="!$ctrl.$resolve.guess">
+    <div class="game-end-message">
+        You know everyone!
+    </div>
+    <a class="score-board-button" href="/#/board">Go to score board</a>
+</div>
 
