@@ -11,3 +11,5 @@ class AppHeaderCtrl {
         this._$location.path('/');
     }
 }
+
+export default AppHeaderCtrl;
