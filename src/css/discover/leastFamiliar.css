@@ -1,0 +1,22 @@
+.least-familiar-table {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.least-familiar-table .least-familiar {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.least-familiar {
+    transition: transform .5s;
+    margin: 0 auto;
+}
+
+.least-familiar:hover {
+    transform: scale3d(1.05, 1.05, 1);
+    transition-duration: 0.3s;
+}

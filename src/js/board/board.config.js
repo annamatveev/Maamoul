@@ -9,8 +9,8 @@ function BoardConfig($stateProvider) {
             templateUrl: 'board/board.html',
             title: 'Hall Of Fame',
             resolve: {
-                topGamers: function(Guess) {
-                    return Guess.topGamers();
+                topGamers: function(Users) {
+                    return Users.topGamers();
                 }
             }
         });

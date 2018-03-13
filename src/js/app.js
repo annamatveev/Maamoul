@@ -17,6 +17,7 @@ import './layout/index';
 import './identification';
 import './notfound';
 import './board';
+import './discover';
 import './photo';
 import './game';
 import './app';
@@ -32,6 +33,7 @@ const requires = [
   'app.identification',
   'app.photo',
   'app.board',
+  'app.discover',
   'app.notfound',
   'app.game',
   'app.layout',

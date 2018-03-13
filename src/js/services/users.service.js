@@ -18,4 +18,18 @@ export default class Users {
                                     )
         );
     }
+
+    topGamers() {
+        return this._$http({
+            url: `${this._AppConstants.api}/users/top_gamers`,
+            method: 'GET'
+        }).then((res) => res.data);
+    }
+
+    leastFamiliar() {
+        return this._$http({
+            url: `${this._AppConstants.api}/users/least_familiar`,
+            method: 'GET'
+        }).then((res) => res.data);
+    }
 }

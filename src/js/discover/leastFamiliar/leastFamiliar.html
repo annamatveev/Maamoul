@@ -1,0 +1,12 @@
+<div class="least-familiar-table">
+    <table>
+        <div class="least-familiar" ng-repeat="gamer in $ctrl.gamers | orderBy: '-wrong_guesses' | limitTo: 6">
+            <div class="photo-placeholder">
+                <md-card>
+                    <img width="1000" height="1000" md-card-image ng-src="{{ gamer.url }}" alt="Photo of you!">
+                </md-card>
+            </div>
+                <span>{{ gamer.name }}</span>
+        </div>
+    </table>
+</div>
