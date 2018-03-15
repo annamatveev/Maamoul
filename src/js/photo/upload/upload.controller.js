@@ -1,10 +1,11 @@
 class UploadPhotoCtrl {
-    constructor($rootScope, AppConstants, Photos, LocalStorage) {
+    constructor($scope, $rootScope, AppConstants, Photos, LocalStorage) {
         'ngInject';
 
         this._Photos = Photos;
         this.loggedInUser = LocalStorage.get(AppConstants.localStorageUserKey);
         this._$rootScope = $rootScope;
+        this._$scope = $scope;
     }
 
     uploadPhoto() {
@@ -15,6 +16,8 @@ class UploadPhotoCtrl {
             .then(res => res.data)
             .then(function(data) {
                 self._$rootScope.$emit('upload', {id: data.id, url});
+                self.uploadPhoto.url = null;
+                self._$scope.uploadForm.$setUntouched();
             });
 
     }
