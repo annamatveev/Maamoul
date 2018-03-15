@@ -1,17 +1,19 @@
 class IdentificationCtrl {
 
-    constructor($q, $scope, $location, Users, LocalStorage) {
+    constructor($q, $scope, $location, $rootScope, Users, LocalStorage) {
         'ngInject';
 
         this._$q = $q;
         this._LocalStorage = LocalStorage;
         this._$location = $location;
+        this._$rootScope = $rootScope;
 
     }
 
     onSelectedItemChange(item) {
         if (item) {
             this._LocalStorage.set('user', item);
+            this._$rootScope.$emit('login', item);
             this._$location.path('/photo');
         }
         else {
