@@ -1,10 +1,11 @@
 class SideNavCtrl {
-    constructor($timeout, $location, $mdSidenav, AppConstants, LocalStorage) {
+    constructor($timeout, $location, $rootScope, $mdSidenav, AppConstants, LocalStorage) {
         'ngInject';
 
         this._$timeout = $timeout;
         this._$location = $location;
         this._$mdSidenav = $mdSidenav;
+        this._$rootScope = $rootScope;
         this._LocalStorage = LocalStorage;
         this._AppConstants = AppConstants;
         this.toggleLeft = this.buildDelayedToggler('left');
@@ -60,6 +61,7 @@ class SideNavCtrl {
 
     logout() {
         this._LocalStorage.remove(this._AppConstants.localStorageUserKey);
+        this._$rootScope.$emit('logout');
         this._$location.path('/');
         this.close();
     }

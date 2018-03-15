@@ -10,6 +10,10 @@ class AppHeaderCtrl {
         $rootScope.$on('login', function(event, data) {
             self.currentUser = data;
         });
+
+        $rootScope.$on('logout', function(event, data) {
+            self.currentUser = null;
+        });
     }
 
     navigateHome() {
