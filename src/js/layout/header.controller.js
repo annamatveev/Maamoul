@@ -6,7 +6,7 @@ class AppHeaderCtrl {
         this.appName = AppConstants.appName;
         this.currentUser = LocalStorage.get(AppConstants.localStorageUserKey);
 
-        self = this;
+        let self = this;
         $rootScope.$on('login', function(event, data) {
             self.currentUser = data;
         });

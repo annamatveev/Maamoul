@@ -1,12 +1,17 @@
 class GalleryCtrl {
-    constructor(Photos) {
+    constructor($rootScope, Photos) {
         'ngInject';
 
         this._Photos = Photos;
+
+        let self = this;
+        $rootScope.$on('upload', function(event, data) {
+            self.photos.push(data);
+        });
     }
 
     deletePhoto(photoIndex, photoId) {
-        self = this;
+        let self = this;
         if (confirm("Are you sure you want to delete this photo?")) {
             this._Photos.deletePhoto(photoId).then(function(res) {
                 if (res.status === 200) {

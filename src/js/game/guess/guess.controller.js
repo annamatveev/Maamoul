@@ -13,7 +13,7 @@ class GuessCtrl {
     }
 
     guessName() {
-        self = this;
+        let self = this;
         const currentUser = this._LocalStorage.get(this._AppConstants.localStorageUserKey)
         this._Guess.guessName(this.guess.photo_id, this.selectedUser, currentUser.id).then(function(correct) {
             self.answered = true;
