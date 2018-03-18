@@ -1,20 +1,24 @@
 class IdentificationCtrl {
 
-    constructor($q, $scope, $location, $rootScope, Users, LocalStorage) {
+    constructor($q, $scope, $location, $rootScope, Auth, Users, LocalStorage) {
         'ngInject';
 
         this._$q = $q;
         this._LocalStorage = LocalStorage;
         this._$location = $location;
         this._$rootScope = $rootScope;
-
+        this._Auth = Auth;
     }
 
     onSelectedItemChange(item) {
         if (item) {
-            this._LocalStorage.set('user', item);
-            this._$rootScope.$emit('login', item);
-            this._$location.path('/photo');
+            let self = this;
+            this._Auth.login({ email: item.username + '@domain.com', password: 'Password1' }).then(function(user){
+                self._LocalStorage.set('user', user);
+                self._$location.path('/photo');
+                self._$rootScope.$emit('login', user);
+            });
+
         }
         else {
             this._LocalStorage.remove('user');

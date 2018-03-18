@@ -1,4 +1,5 @@
 <div class="identification" layout="column" ng-cloak>
+    <h1>Who are you?</h1>
     <md-content class="md-padding">
         <form ng-submit="$event.preventDefault()">
             <md-autocomplete
@@ -10,7 +11,7 @@
                     md-min-length="0"
                     md-autoselect="true"
                     md-select-on-match="true"
-                    placeholder="Who are you?">
+                    placeholder="Start typing...">
                 <md-item-template>
                     <span md-highlight-text="$ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
                 </md-item-template>
