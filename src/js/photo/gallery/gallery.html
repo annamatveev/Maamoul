@@ -3,12 +3,13 @@
         <div class="photo-placeholder">
             <div class="clear-icon"
                  ng-click="$ctrl.deletePhoto($index, photo.id)"
-                 ng-show="$ctrl.photos.length > 1">
+                 ng-if="$ctrl.photos.length > 1">
                 <md-tooltip md-direction="top">Delete Photo</md-tooltip>
                 <md-icon ng-bind="'clear'"></md-icon>
             </div>
             <md-card>
-                <img width="1000" height="1000" md-card-image ng-src="{{ photo.url }}" alt="Photo of you!">
+                <img class="md-card-image" ng-src="{{ photo.url }}" alt="Photo of you!">
+                <md-card-footer ng-if="photo.name">{{ photo.name }}</md-card-footer>
             </md-card>
         </div>
     </div>

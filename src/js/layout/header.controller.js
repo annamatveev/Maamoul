@@ -1,24 +1,26 @@
-class AppHeaderCtrl {
-    constructor($location, $rootScope, AppConstants, LocalStorage) {
+class HeaderCtrl {
+    constructor($location, $rootScope, Auth, AppConstants) {
         'ngInject';
 
         this._$location = $location;
         this.appName = AppConstants.appName;
-        this.currentUser = LocalStorage.get(AppConstants.localStorageUserKey);
 
         let self = this;
-        $rootScope.$on('login', function(event, data) {
-            self.currentUser = data;
+
+        if (Auth.isAuthenticated()) {
+            Auth.currentUser().then(function(user) {
+                self.currentUser = user;
+            });
+        }
+
+        $rootScope.$on('devise:login', function(event, user) {
+            self.currentUser = user;
         });
 
-        $rootScope.$on('logout', function(event, data) {
+        $rootScope.$on('devise:logout', function(event, data) {
             self.currentUser = null;
         });
     }
-
-    navigateHome() {
-        this._$location.path('/');
-    }
 }
 
-export default AppHeaderCtrl;
+export default HeaderCtrl;

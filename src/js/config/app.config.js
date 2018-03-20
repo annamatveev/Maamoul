@@ -1,4 +1,4 @@
-function AppConfig($stateProvider, $urlRouterProvider, AuthProvider) {
+function AppConfig($stateProvider, $urlRouterProvider, $httpProvider, AuthProvider) {
   'ngInject';
 
   $stateProvider
@@ -7,9 +7,12 @@ function AppConfig($stateProvider, $urlRouterProvider, AuthProvider) {
     templateUrl: 'layout/main-view.html'
   });
 
+  $httpProvider.defaults.withCredentials = true;
+  AuthProvider.baseUrl('http://localhost:3000');
+
+  $urlRouterProvider.when('/','/identification');
   $urlRouterProvider.otherwise('/notfound');
 
-  AuthProvider.baseUrl('http://localhost:3000');
 
 }
 

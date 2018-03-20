@@ -2,7 +2,8 @@ import GalleryCtrl from './gallery.controller'
 
 let Gallery = {
     bindings: {
-        photos: '='
+        photos: '<',
+        currentUser: '<'
     },
     controller: GalleryCtrl,
     controllerAs: '$ctrl',

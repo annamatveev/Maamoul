@@ -12,7 +12,4 @@ servicesModule.service('Photos', PhotosService);
 import GuessService from './guess.service';
 servicesModule.service('Guess', GuessService);
 
-import LocalStorageService from './localStorage.service';
-servicesModule.service('LocalStorage', LocalStorageService);
-
 export default servicesModule;

@@ -1,8 +1,8 @@
-import AppHeaderCtrl from './header.controller'
+import HeaderCtrl from './header.controller'
 
 let AppHeader = {
-  controller: AppHeaderCtrl,
-  templateUrl: 'layout/header.html'
+    controller: HeaderCtrl,
+    templateUrl: 'layout/header.html'
 };
 
 export default AppHeader;

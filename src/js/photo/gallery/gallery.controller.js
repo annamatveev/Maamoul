@@ -5,6 +5,7 @@ class GalleryCtrl {
         this._Photos = Photos;
 
         let self = this;
+        // TODO: Ask elad wtf man
         $rootScope.$on('upload', function(event, data) {
             self.photos.push(data);
         });

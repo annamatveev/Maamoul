@@ -1,9 +1,16 @@
-function AppRun($rootScope, $state, AppConstants, LocalStorage) {
+function AppRun($rootScope, $state, Auth, AppConstants) {
   'ngInject';
 
   // change page title based on state
   $rootScope.$on('$stateChangeSuccess', (event, toState) => {
     $rootScope.setPageTitle(toState.title);
+
+      if (!Auth.isAuthenticated()) { // Redirect to login
+          $state.go('app.identification');
+      }
+      else if (toState.url === '/identification' || toState.url === '/') { // Prevent logged in users from getting to login page
+          $state.go('app.photo');
+      }
   });
 
   // Helper method for setting the page's title
@@ -15,7 +22,6 @@ function AppRun($rootScope, $state, AppConstants, LocalStorage) {
     }
     $rootScope.pageTitle += AppConstants.appName;
   };
-
 }
 
 export default AppRun;

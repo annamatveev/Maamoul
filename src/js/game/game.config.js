@@ -9,10 +9,13 @@ function IdentificationConfig($stateProvider) {
             templateUrl: 'game/game.html',
             title: 'Start playin',
             resolve: {
-                guess: function(Guess, LocalStorage) {
-                    const user = LocalStorage.get('user');
-                    return Guess.nextGuess(user.id);
+                currentUser: function(Auth) {
+                    return Auth.currentUser();
+                },
+                guess: function(Auth, Guess) {
+                    return Auth.currentUser().then((user) => Guess.generate(user.id));
                 }
+
             }
         });
 

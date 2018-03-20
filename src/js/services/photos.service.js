@@ -6,13 +6,13 @@ export default class Photos {
         this._$http = $http;
     }
 
-    getUserPhotos(user_id) {
+    getUserPhotos(user) {
         return this._$http({
-            url: `${this._AppConstants.api}/photos/${user_id}`,
+            url: `${this._AppConstants.api}/photos/${user.id}`,
             method: 'GET',
         }).then((res) => res.data.map((item) => ({
                 id: item.id,
-                user_id: user_id,
+                user_id: user.id,
                 uploader_id: item.uploader_id,
                 url: item.url
             })

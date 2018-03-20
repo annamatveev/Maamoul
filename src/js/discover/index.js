@@ -10,8 +10,4 @@ discoverModule.config(DiscoverConfig);
 import DiscoverCtrl from './discover.controller';
 discoverModule.controller('DiscoverCtrl', DiscoverCtrl);
 
-// Controllers
-import LeastFamiliar from './leastFamiliar/leastFamiliar.component';
-discoverModule.component('leastFamiliar', LeastFamiliar);
-
 export default discoverModule;

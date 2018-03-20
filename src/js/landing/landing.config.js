@@ -4,9 +4,7 @@ function LandingConfig($stateProvider) {
     $stateProvider
         .state('app.landing', {
             url: '/',
-            controller: 'LandingCtrl',
-            controllerAs: '$ctrl',
-            title: 'Home'
+            title: 'Home',
         });
 
 };

@@ -1,11 +1,11 @@
 <div class="photos">
     <div class="welcome-message">
-        hey, it's you?
+        hey, is that you?
     </div>
     <gallery photos="$ctrl.$resolve.photos"></gallery>
-    <upload-photo></upload-photo>
+    <upload-photo current_user="$ctrl.$resolve.currentUser"></upload-photo>
 
     <div class="start-playing">
-        <md-button ng-click="$ctrl.skipUpload()" class="md-raised md-primary start-playing-button">Start Playin'</md-button>
+        <md-button ui-sref="app.game" class="md-raised md-primary start-playing-button">Start Playin'</md-button>
     </div>
 </div>

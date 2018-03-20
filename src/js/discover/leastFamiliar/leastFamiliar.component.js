@@ -4,7 +4,6 @@ let LeastFamiliar = {
     bindings: {
         gamers: '='
     },
-    controller: LeastFamiliarCtrl,
     templateUrl: 'discover/leastFamiliar/leastFamiliar.html'
 };
 

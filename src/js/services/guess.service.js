@@ -6,11 +6,10 @@ export default class Guess {
         this._$http = $http;
     }
 
-    nextGuess(user_id) {
+    generate() {
         return this._$http({
-            url: `${this._AppConstants.api}/guesses/generate`,
-            method: 'POST',
-            data: { user_id }
+            url: `${this._AppConstants.api}/guesses/new`,
+            method: 'GET'
         }).then((res) => res.data);
     }
 

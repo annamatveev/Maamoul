@@ -13,7 +13,8 @@ export default class Users {
         }).then((res) => res.data.map((item) => ({ id: item.id,
                                                     username: item.username,
                                                     value: angular.lowercase(item.name),
-                                                    display: item.name
+                                                    display: item.name,
+                                                    email: item.email
                                                 })
                                     )
         );

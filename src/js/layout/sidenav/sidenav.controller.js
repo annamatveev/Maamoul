@@ -1,12 +1,13 @@
 class SideNavCtrl {
-    constructor($timeout, $location, $rootScope, $mdSidenav, AppConstants, LocalStorage) {
+    constructor($timeout, $scope, $state, $rootScope, $mdSidenav, AppConstants, Auth) {
         'ngInject';
 
         this._$timeout = $timeout;
-        this._$location = $location;
+        this._$state = $state;
+        this._$scope = $scope;
         this._$mdSidenav = $mdSidenav;
         this._$rootScope = $rootScope;
-        this._LocalStorage = LocalStorage;
+        this._Auth = Auth;
         this._AppConstants = AppConstants;
         this.toggleLeft = this.buildDelayedToggler('left');
         this.toggleRight = this.buildToggler('right');
@@ -20,7 +21,7 @@ class SideNavCtrl {
         let timer;
 
         return function debounced() {
-            var context = $scope,
+            var context = this._$scope,
                 args = Array.prototype.slice.call(arguments);
             this._$timeout.cancel(timer);
             timer = this._$timeout(function() {
@@ -49,20 +50,18 @@ class SideNavCtrl {
 
     };
 
-    navigateToBoard() {
-        this._$location.path('/board');
-        this.close();
-    }
-
-    navigateToDiscover() {
-        this._$location.path('/discover');
-        this.close();
+    isLoggedIn() {
+        return this._Auth.isAuthenticated();
     }
 
     logout() {
-        this._LocalStorage.remove(this._AppConstants.localStorageUserKey);
-        this._$rootScope.$emit('logout');
-        this._$location.path('/');
+        const config = {
+            headers: {
+                'X-HTTP-Method-Override': 'DELETE'
+            }
+        };
+
+        this._Auth.logout(config).then(() => this._$state.go('app.identification'));
         this.close();
     }
 }

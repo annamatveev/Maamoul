@@ -9,10 +9,16 @@ function PhotoConfig($stateProvider) {
             templateUrl: 'photo/photo.html',
             title: 'Show yourself',
             resolve: {
-                photos: function(Photos, LocalStorage) {
-                    const user = LocalStorage.get('user');
-                    return Photos.getUserPhotos(user.id);
-                }
+                photos: function($location, Auth, Photos) {
+                    return Auth.currentUser().then(function(user) {
+                            return Photos.getUserPhotos(user);
+                        });
+                },
+                currentUser: function(Auth) {
+                    return Auth.currentUser().then(function(user) {
+                        return user;
+                    });
+                },
             }
         });
 

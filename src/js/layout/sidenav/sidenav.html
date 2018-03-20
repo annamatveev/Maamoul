@@ -13,17 +13,25 @@
                 <h1 class="md-toolbar-tools">What are you up to?</h1>
             </md-toolbar>
             <md-content class="sidebar-list" layout-padding>
-                <div class="discover-button" ng-click="$ctrl.navigateToDiscover()">
+                <div ui-sref="app.photo" class="photos-button" ng-click="$ctrl.close()">
+                    <md-icon ng-bind="'file_upload'"></md-icon>
+                    <span>Upload Photo</span>
+                </div>
+                <div ui-sref="app.discover" class="discover-button" ng-click="$ctrl.close()">
                     <md-icon ng-bind="'face'"></md-icon>
                     <span>Discover</span>
                 </div>
-                <div class="board-button" ng-click="$ctrl.navigateToBoard()">
+                <div ui-sref="app.board" class="board-button" ng-click="$ctrl.close()">
                     <md-icon ng-bind="'whatshot'"></md-icon>
                     <span>Hall of Fame</span>
                 </div>
-                <div class="logout-button" ng-click="$ctrl.logout()">
+                <div class="logout-button" ng-show="$ctrl.isLoggedIn()" ng-click="$ctrl.logout()">
                     <md-icon ng-bind="'exit_to_app'"></md-icon>
                     <span>Logout</span>
+                </div>
+                <div ui-sref="app.identification" class="login-button" ng-show="!$ctrl.isLoggedIn()" ng-click="$ctrl.close()">
+                    <md-icon ng-bind="'exit_to_app'"></md-icon>
+                    <span>Login</span>
                 </div>
             </md-content>
             <md-divider ></md-divider>

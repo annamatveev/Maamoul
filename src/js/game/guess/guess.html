@@ -1,7 +1,7 @@
 <div class="guess">
     <div class="photo-placeholder">
         <md-card>
-            <img md-card-image ng-src="{{ $ctrl.guess.photo_url }}" alt="Photo of you!">
+            <img md-card-image ng-src="{{ $ctrl.guess.photo_url }}" alt="Someone to guess">
         </md-card>
     </div>
     <div class="guess-choices">
@@ -15,10 +15,10 @@
         </md-radio-group>
     </div>
     <div class="feedback">
-        <div ng-style="{'visibility': $ctrl.answered && $ctrl.correctAnswer ?'visible':'hidden'}" class="correct">
+        <div ng-style="{'visibility': $ctrl.answered && $ctrl.isCorrect ? 'visible':'hidden'}" class="correct">
             Correct
         </div>
-        <div ng-style="{'visibility': $ctrl.answered && !$ctrl.correctAnswer ?'visible':'hidden'}" class="wrong">
+        <div ng-style="{'visibility': $ctrl.answered && !$ctrl.isCorrect ? 'visible':'hidden'}" class="wrong">
             Wrong
         </div>
     </div>

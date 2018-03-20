@@ -1,8 +1,8 @@
-class BoardCtrl {
+class DiscoverCtrl {
     constructor() {
         'ngInject';
 
     }
 }
 
-export default BoardCtrl;
+export default DiscoverCtrl;
