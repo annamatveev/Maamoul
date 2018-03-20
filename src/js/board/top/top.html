@@ -8,5 +8,8 @@
             </div>
             <div class="gamer-score">{{ gamer.score }}</div>
         </div>
+        <div ng-if="$ctrl.gamers.length === 0" class="no-results">
+            There are no users to display
+        </div>
     </table>
 </div>

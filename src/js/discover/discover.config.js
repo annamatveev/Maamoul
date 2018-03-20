@@ -11,6 +11,11 @@ function DiscoverConfig($stateProvider) {
             resolve: {
                 leastFamiliar: function(Users) {
                     return Users.leastFamiliar();
+                },
+                currentUser: function(Auth) {
+                    return Auth.currentUser().then(function(user) {
+                        return user;
+                    });
                 }
             }
         });

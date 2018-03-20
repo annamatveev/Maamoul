@@ -18,7 +18,8 @@ class IdentificationCtrl {
     }
 
     querySearch (query) {
-        return query ? this.$resolve.users.filter(angular.lowercase(query)) : this.$resolve.users;
+        return query ?
+            this.$resolve.users.filter((user) => user.value.startsWith(angular.lowercase(query))) : this.$resolve.users;
     }
 }
 

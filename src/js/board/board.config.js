@@ -11,6 +11,11 @@ function BoardConfig($stateProvider) {
             resolve: {
                 topGamers: function(Users) {
                     return Users.topGamers();
+                },
+                currentUser: function(Auth) {
+                    return Auth.currentUser().then(function(user) {
+                        return user;
+                    });
                 }
             }
         });

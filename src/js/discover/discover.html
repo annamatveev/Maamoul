@@ -2,3 +2,6 @@
     Discover
 </h1>
 <gallery photos="$ctrl.$resolve.leastFamiliar"></gallery>
+<div ng-if="$ctrl.$resolve.leastFamiliar.length === 0" class="no-results">
+    There are no users to display
+</div>
