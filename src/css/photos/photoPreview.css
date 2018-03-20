@@ -51,3 +51,14 @@
 .photo-placeholder:hover .clear-icon {
     display: inline-block;
 }
+
+.photo-warning {
+    margin: 20px 5px 5px 5px;
+    color: #885e19;
+    font-size: 12px;
+}
+
+.photo-warning md-icon {
+    color: #ff9b4f;
+    font-size: 17px;
+}
